@@ -578,8 +578,8 @@ def rapport_pdf():
 
 def entete():
     txt = u"""Bienvenue à l’observatoire digital des destinations françaises
-et européennes de Atout France – powered by BC.
-L’observatoire digital de Atout France mesure, par quinzaine, par mois 
+et européennes de XXXXXX – powered by BC.
+L’observatoire digital de XXXXXX mesure, par quinzaine, par mois 
 et par trimestre, les niveaux d’intérêts d’un marché
 dans Google Trends (rubrique « travel  ») d’une sélection de mots clés
 génériques et des destinations touristiques françaises par espaces
@@ -587,10 +587,9 @@ génériques et des destinations touristiques françaises par espaces
 comparer à la concurrence en Europe.
     """
     cols = st.columns(2) # number of columns in each row! = 2
-    cols[0].image("logo_Atout_France.png", use_column_width=True)
     cols[1].image("logo_Baudy_Co.png", use_column_width=True) 
     #cols[1].image("https://nicolasbaudy.files.wordpress.com/2020/02/cropped-logo-new-2.png")
-    st.title("Observatoire digital des destinations")
+    st.title("Observatoire Digital des Destinations")
     st.text(txt)
 
 
@@ -1082,9 +1081,6 @@ def export_ppt(generation_generique=True, generation_generique_par_pays=True):
         presente = Presentation()
         page_titre = presente.slide_layouts[1]
         slide = presente.slides.add_slide(page_titre)
-        slide.shapes.add_picture("logo_Atout_France.png",
-                                  Inches(1), Inches(3),
-                                  width = Inches(5))
         slide.shapes.add_picture("logo_Baudy_Co.png",
                                   Inches(4.5), Inches(3),
                                   width = Inches(5))
